@@ -1,0 +1,6 @@
+print('n=123')
+print('f=456.789')
+print('s1=\'hello world\'')
+print('s2=\'hello,\\\'adam\\\'')
+print('s3=r\'hello,"bart"\'')
+print('s4=r\'\'\'hello,\nlisa!\'\'\'')
