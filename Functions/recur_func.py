@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+#递归函数移动汉诺塔
+
 def move (n, a, b, c):
 	if n == 1:
 		print (a, "->", c)
