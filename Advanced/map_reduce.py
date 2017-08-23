@@ -9,7 +9,6 @@ L1 = ['adam', 'LISA', 'barT']
 L2 = list(map(normalize, L1))
 print(L2)
 
-
 #请编写一个prod()函数，可以接受一个list并利用reduce()求积
 
 from functools import reduce
@@ -21,7 +20,6 @@ def prod(L):
 	return reduce(multi, L)
 
 print('3 * 5 * 7 * 9 =', prod([3, 5, 7, 9]))
-
 
 #利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456
 
