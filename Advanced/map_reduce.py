@@ -42,3 +42,5 @@ def str2float(s):
 		return reduce(fn,map(str2num,s))
 
 print('str2float(\'123.456\') =', str2float('123.456'))
+#验证一下
+print(isinstance(str2float('123.456'),float))
