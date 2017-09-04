@@ -46,3 +46,40 @@ def now():
 	print('2017-9-1')
 
 now()
+
+##再思考一下能否写出一个@log的decorator，使它既支持：@log 又支持@log('execute')
+
+import functools
+
+def log1(text):
+
+	if isinstance(text, str):
+		def decorator(func):
+			@functools.wraps(func)
+			def wrapper(*args, **kw):
+				print('%s %s():' % (text, func.__name__))
+				return func(*args, **kw)
+			return wrapper
+		return decorator
+
+	else:
+		def decorator(func):
+			@functools.wraps(func)
+			def wrapper(*args, **kw):
+				print('call %s():' % func.__name__)
+				return func(*args, **kw)
+			return wrapper
+		return decorator
+
+@log1('execute')
+def now():
+	print('2017-9-1')
+
+now()
+
+#这里一直报错，说缺少一个位置参数，后来添加了一个None就运行成功了，可是原理不明，再学几课再回来研究研究。
+@log1(None)
+def now():
+	print('2017-9-1')
+
+now()
