@@ -34,3 +34,5 @@ print('a is Cat?', isinstance(a, Cat))
 run_twice(a)
 run_twice(c)
 run_twice(d)
+
+#继承可以把父类的所有功能都直接拿过来，这样就不必从零做起，子类只需要新增自己特有的方法，也可以把父类不适合的方法覆盖重写。
